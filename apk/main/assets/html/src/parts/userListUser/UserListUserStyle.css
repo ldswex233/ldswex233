@@ -1,0 +1,55 @@
+.element {
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #181828;
+    border-radius: 8px;
+}
+
+.element > img {
+    height: 50px;
+}
+
+@keyframes click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.element > button.click {
+    animation: click 0.3s;
+}
+
+.element > button {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    border: none;
+    background: #ff5852;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.element > .details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+}
+
+.element > .details > .name {
+    font-size: 18px;
+}
+
+.element > .details > .sub {
+    font-size: 12px;
+}
+
+.element > .details > .sub > .field {
+    border-radius: 8px;
+    padding: 3px;
+    background: #00e159;
+    color: black;
+}

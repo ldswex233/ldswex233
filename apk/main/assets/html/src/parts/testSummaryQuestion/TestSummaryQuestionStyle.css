@@ -1,0 +1,46 @@
+.element + .element {
+    margin-top: 5px;
+}
+
+.element {
+    padding: 13px;
+    background: rgb(24, 29, 49);
+    width: -webkit-fill-available;
+    border-radius: 8px;
+    /*border-left: 8px solid #14ff14;*/
+    border-left: 8px solid #37ff37;
+}
+
+.element.wrong {
+    border-left: 8px solid #ff3f3f;
+}
+
+.element > .question {
+    width: fit-content;
+}
+
+.element > .review {
+
+}
+
+.element > .review > .selected {
+    color: gray;
+}
+
+.element > .review > .correct {
+    color: #37ff37;
+}
+
+.element > .review > *:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    border: 3px solid #37ff37;
+    margin-right: 4px;
+}
+
+.element > .review > .selected:before {
+    border: 3px solid gray;
+}

@@ -1,0 +1,22 @@
+button.active {
+    color: #04bdff;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button > i {
+    font-size: 35px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+

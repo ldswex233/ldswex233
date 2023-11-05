@@ -1,0 +1,42 @@
+.element {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.element > button {
+    width: 65px;
+    border-radius: 8px;
+    border: 5px solid rgb(255, 75, 75);
+    background: rgb(22, 26, 41);
+    color: rgb(255, 75, 75);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.element + .element {
+    margin-top: 10px;
+}
+
+.element > .content {
+    border-left: 8px solid;
+    border-left-color: rgb(0, 178, 255);
+    background: rgb(22, 26, 41);
+    border-radius: 7px;
+    padding: 10px;
+    flex: 1;
+}
+
+.element.info > .content { border-left-color: #25BF6C; }
+.element.homework > .content { border-left-color: #00B2FF; }
+.element.partial > .content { border-left-color: #8E25BF; }
+.element.test > .content { border-left-color: #BF2566; }
+
+.element > .content > .subject {
+    font-family: MPlus1p-Regular, sans-serif;
+    font-size: 18px;
+}
+
+.element > .content > .details > .description {
+    color: gray;
+}

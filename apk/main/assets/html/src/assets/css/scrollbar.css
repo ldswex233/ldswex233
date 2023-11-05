@@ -1,0 +1,23 @@
+:root {
+    --scroll-border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: gray;
+    border-radius: var(--scroll-border-radius);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d2d5e6;
+
+    border-radius: var(--scroll-border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}

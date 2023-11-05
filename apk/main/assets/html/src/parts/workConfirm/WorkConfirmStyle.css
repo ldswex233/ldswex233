@@ -1,0 +1,36 @@
+.body {
+
+}
+
+.body > .form {
+
+}
+
+.body > .form > .types {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    width: 98vw;
+    flex-wrap: wrap;
+}
+
+.body > .form > .types > * {
+    background: rgb(32, 34, 48);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 10px;
+    outline: 0px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    width: 40vw;
+}
+
+.body > .form > .types > *.active {
+    background: rgb(0 225 89);
+    color: rgb(32, 34, 48);
+}

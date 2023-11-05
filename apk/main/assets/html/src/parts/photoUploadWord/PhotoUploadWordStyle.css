@@ -1,0 +1,22 @@
+.element {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: center;
+}
+
+.element > i {
+    color: #0062ff;
+    display: flex;
+    align-items: center;
+}
+
+.element > input {
+    background-color: rgb(26, 29, 49);
+    color: white;
+    outline: 0;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px;
+    width: 45%;
+}

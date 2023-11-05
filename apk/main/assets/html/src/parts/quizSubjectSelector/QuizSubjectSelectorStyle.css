@@ -1,0 +1,42 @@
+.subject-selector {
+    padding: 10px;
+    height: fit-content;
+    cursor: pointer;
+    border-radius: 15px;
+    color: white;
+    font-family: MPlus1p-Regular, sans-serif;
+    font-size: 20px;
+    background: #161A29;
+    /*border: 2px solid #21253a;*/
+    border: 2px solid #3253ff;
+}
+
+.subject-selector > .selected {
+
+}
+
+.subject-selector > .options {
+    width: -webkit-fill-available;
+    margin-top: 10px;
+    position: absolute;
+    transform: translateX(-11px);
+    z-index: 10;
+    background: #161A29;
+    border: 2px solid #3253ff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.subject-selector > .options > .option {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.subject-selector > .options > .option:hover {
+    background: #24263d;
+}
+
+.subject-selector > .options > .option + .option {
+
+}

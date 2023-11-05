@@ -1,0 +1,79 @@
+.test-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.test-summary > .card > button {
+    width: 90vw;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-family: MPlus1p-Bold, sans-serif;
+    font-size: 24px;
+    background: rgb(22, 26, 41);
+    z-index: 10;
+}
+
+.test-summary > .card + .card {
+    margin-top: 10px;
+}
+
+.test-summary > .card {
+    padding: 17px;
+    background: rgb(12, 16, 30);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    width: -webkit-fill-available;
+}
+
+.test-summary > .card > progress {
+    --margin: 17px;
+    appearance: none;
+    height: 13px;
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+    width: -webkit-fill-available;
+}
+
+.test-summary > .card > progress::-webkit-progress-bar {
+    background-color: rgb(26, 29, 49); /* Custom background color */
+    border-radius: 8px;
+}
+
+.test-summary > .card > progress::-webkit-progress-value {
+    background: linear-gradient(to right, #008f00, #14ff14); /* Custom progress color */
+    border-radius: 8px;
+    transition-delay: 0.3s;
+    transition-property: width;
+    transition-duration: 3s;
+}
+
+.test-summary > .card > .sub,
+.test-summary > .card > .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.test-summary > .card > .sub {
+    font-family: Inter-Regular, sans-serif;
+    font-size: 14px;
+    color: #d7d7d7;
+}
+
+.test-summary > .card > .sub span.gray {
+    color: white;
+}
+
+.test-summary > .card > .list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
