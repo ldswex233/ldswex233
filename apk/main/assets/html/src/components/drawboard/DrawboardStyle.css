@@ -1,0 +1,17 @@
+.drawboard {
+
+}
+
+.drawboard > button {
+    width: 7vw;
+    background: transparent;
+    color: gray;
+    border: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.drawboard > button > i {
+    font-size: 25px;
+}

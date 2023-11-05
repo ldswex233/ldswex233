@@ -1,0 +1,175 @@
+.quizes {
+    background: #161A2926;
+}
+
+.quizes > .selector {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.quizes > .selector > .subject-selector {
+    flex: 1;
+}
+
+.quizes > .selector > button {
+    position: sticky;
+    bottom: 80px;
+    left: calc((100vw - 30px) - 35px);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgb(0 132 255);
+    color: black;
+    font-size: 35px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(black 2px 4px 6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizes > .selector > button > img {
+    width: 40px;
+}
+
+.quizes > .header {
+    height: 45px;
+    background: rgba(15, 19, 28, 0.15);
+    border-bottom: 2px solid rgb(35, 35, 58);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: inherit;
+    z-index: 3;
+}
+
+.quizes > .header > .field {
+    background: rgb(31, 31, 52);
+    border: 2px solid rgb(49, 49, 119);
+    border-radius: 8px;
+    padding: 6px 15px;
+    color: white;
+}
+
+.quizes > .header > .field > span > .gray {
+    display: inline-block;
+    color: gray;
+    font-size: 14px;
+}
+
+.quizes > .header > .field > span > strong {
+    background: rgb(43, 43, 70);
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-weight: normal;
+}
+
+.quizes > .header > .field > i {
+    position: relative;
+    top: -2px;
+    margin-left: 3px;
+}
+
+.quizes > .card {
+    padding: 10px;
+    vertical-align: top;
+    margin: 5px;
+    display: inline-block;
+    background: #1c1c31;
+    border-radius: 5px;
+    width: 38vw;
+    height: 15vh;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.quizes > .card > .title {
+    font-size: 20px;
+}
+
+.quizes > .card > img {
+    width: 34%;
+    position: relative;
+    bottom: 30px;
+    float: right;
+    --mask: linear-gradient(-25deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    -webkit-mask-image: var(--mask);
+    mask-image: var(--mask);
+}
+
+.quizes > .map {
+    padding-bottom: 50px;
+}
+
+.quizes > .map > .structures {
+    margin-top: 30px;
+    padding-bottom: 70px;
+}
+
+.quizes > .map > .structures:empty:before {
+    content: "Brak wybranego przedmiotu";
+    display: inline-block;
+    color: gray;
+    position: sticky;
+    top: 50vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.quizes > .map > .structures > * {
+    position: absolute;
+}
+
+.quizes > .map > .structures > .point {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@keyframes img-scale {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.9); }
+}
+
+@keyframes img-shadow {
+    0% { filter: drop-shadow(0 0 10px #269FD3) opacity(1);  }
+    50% { filter: drop-shadow(0 0 10px #020405) opacity(1);  }
+    100% { filter: drop-shadow(0 0 10px #269FD3) opacity(1);  }
+}
+
+.quizes > .map > .structures > .point.gray-out {
+
+}
+
+.quizes > .map > .structures > .point.gray-out > img {
+    filter: drop-shadow(2px 4px 6px black) opacity(0.7);
+    animation: img-scale 2s infinite
+}
+.quizes > .map > .structures > .point.active > img {
+    filter: drop-shadow(0 0 10px #269FD3) opacity(1);
+    animation: img-shadow 5.5s infinite;
+}
+.quizes > .map > .structures > .point.gray-out > p {
+    color: gray;
+}
+.quizes > .map > .structures > .point.active > p { color: #269FD3; }
+
+.quizes > .map > .structures > .point > p {
+    margin: 0;
+    max-width: 30vw;
+    text-align: center;
+}
+
+.quizes > .map > .structures > .point > img {
+    width: 27vw;
+    opacity: 0.8;
+    filter: drop-shadow(2px 4px 6px black) opacity(0.7);
+}

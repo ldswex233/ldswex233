@@ -1,0 +1,158 @@
+.popup {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background: #121220;
+    border: 2px solid rgb(35, 35, 58);
+    border-radius: 5px;
+    height: fit-content;
+    width: 80%;
+    filter: drop-shadow(2px 4px 6px black);
+    display: none;
+}
+
+.popup.open {
+    animation: popup-open 0.5s;
+}
+
+.popup.close {
+    transform: translateY(200%) scale(0.5);
+    animation: popup-close 0.5s;
+}
+
+@keyframes popup-open {
+    0% {
+        transform: translateY(200%) scale(0.5);
+    }
+}
+
+@keyframes popup-close {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(200%) scale(0.5);
+    }
+}
+
+.popup > .header {
+    background: rgb(21, 21, 37);
+    padding: 10px;
+    text-align: center;
+}
+
+.popup > .header > .day > .name {
+    font-size: 24px;
+}
+
+.popup > .header > .day > .details {
+    color: gray;
+    font-size: 14px;
+}
+
+.popup > .body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup > .body > .list {
+    width: -webkit-fill-available;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.popup > .body > .list:empty:after {
+    text-align: center;
+    content: "Brak prac w tym dniu";
+    color: gray;
+    font-size: 16px;
+    padding: 20px;
+    display: inline-block;
+    width: -webkit-fill-available;
+}
+
+.popup > .body > button {
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 80px;
+    height: 35px;
+    background: dodgerblue;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.popup > .body > .list > .element + .element {
+    border-top: 2px solid rgb(35, 35, 58);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.popup > .body > .list > .element {
+    padding: 4px;
+}
+
+.popup > .body > .list > .element > .subject {
+    font-size: 18px;
+}
+
+.popup > .body > .list > .element > .details:before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #0090e7;
+    position: relative;
+    left: -13px;
+    border-radius: 50%;
+}
+
+.popup > .body > .list > .element > .details {
+    margin-left: 4px;
+    border-left: 2px solid #0090e7;
+    padding-left: 10px;
+}
+
+.popup > .body > .list > .element > .details > .description {
+    font-size: 16px;
+    width: max-content;
+    /* max-width: 320px; */
+    max-width: 99%;
+}
+
+.popup > .body > .list > .element > .details > .author {
+    color: gray;
+    font-size: 14px;
+}
+
+.popup > .body > .list > .element > .details > .author > i {
+    font-size: 12px;
+}
+
+.popup > .body > .list > .element > .buttons {
+    margin-top: 5px;
+}
+
+.popup > .body > .list > .element > .buttons > button {
+    background: rgb(0, 144, 231);
+    border: none;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup > .body > .list > .element > .buttons > button.yellow {
+    background: #c5ae06;
+}
+
+.popup > .body > .list > .element > .buttons > button.red {
+    background: #ef2121;
+}

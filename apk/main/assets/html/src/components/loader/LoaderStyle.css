@@ -1,0 +1,33 @@
+:root {
+    --loader-size: 100px;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+.loader > .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.loader > .circle {
+    border: 8px solid rgb(12, 12, 21);
+    border-radius: 50%;
+    border-top: 8px solid lime;
+    width: var(--loader-size);
+    height: var(--loader-size);
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

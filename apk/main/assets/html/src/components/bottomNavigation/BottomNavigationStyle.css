@@ -1,0 +1,15 @@
+.bottom-navigation {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70vw;
+    z-index: 10;
+    background: #161A29;
+    height: 60px;
+    border-radius: 12px;
+    filter: drop-shadow(2px 4px 6px black);
+}

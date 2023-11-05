@@ -1,0 +1,124 @@
+.popup {
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: #0C101E;
+    height: 40vh;
+    width: 99vw;
+    filter: drop-shadow(black 2px 4px 6px);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: none;
+}
+
+.popup.open {
+    animation: popup-open 0.5s;
+}
+
+.popup.close {
+    transform: translateY(40vh);
+    animation: popup-close 0.5s;
+}
+
+@keyframes popup-open {
+    0% { transform: translateY(40vh); }
+}
+
+@keyframes popup-close {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(40vh); }
+}
+
+.popup > .header {
+    text-align: center;
+}
+
+.popup > .header > .trigger {
+    height: 40px;
+}
+
+.popup > .header > .trigger > .display {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF52;
+    border-radius: 4px;
+    height: 9px;
+    width: 30vw;
+}
+
+.popup > .header > .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup > .header > .day > .name {
+    font-size: 24px;
+    font-family: MPlus1p-Bold, sans-serif;
+}
+
+.popup > .header > .day > .details:before {
+    content: "•";
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.popup > .header > .day > .details {
+    color: gray;
+    font-size: 18px;
+    font-family: Inter-Regular, sans-serif;
+}
+
+.popup > .body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup > .body > .list {
+    width: -webkit-fill-available;
+    max-height: 28vh;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.popup > .body > .list:empty:after {
+    text-align: center;
+    content: "Brak prac w tym dniu";
+    color: gray;
+    font-size: 16px;
+    padding: 20px;
+    display: inline-block;
+    width: -webkit-fill-available;
+}
+
+.popup > .body > button {
+    float: right;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    /*background: rgb(77 125 255);*/
+    /*background: rgb(93 136 249);;*/
+    background: rgb(0 132 255);
+    color: black;
+    font-size: 35px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(black 2px 4px 6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup > .body > button > img {
+    width: 45px;
+}

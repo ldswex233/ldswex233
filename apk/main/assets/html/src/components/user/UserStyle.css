@@ -1,0 +1,235 @@
+.user {
+    background: rgba(22, 26, 41, 0.15);
+}
+
+.user > .header {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user > .header > .title {
+    font-family: MPlus1p-Bold, sans-serif;
+    font-size: 24px;
+}
+
+.user > .header > .image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user > .header > .image > img {
+    width: 40vw;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.user > .header > .image > .sub {
+    border: 3px solid #00030E;
+    width: fit-content;
+    background: #373844;
+    border-radius: 19px;
+    padding: 6px 13px;
+    position: relative;
+    top: -15px;
+}
+
+.user > .header > .username {
+    font-size: 24px;
+    font-family: Inter-Regular, sans-serif;
+    position: relative;
+    top: -8px;
+}
+
+.user > .body {
+    padding: 15px;
+}
+
+.user > .body > .card + .card {
+    margin-top: 10px;
+}
+
+.user > .body > .card {
+    background: rgb(12, 16, 30);
+    border-radius: 10px;
+}
+
+.user > .body > .card > .section + .section {
+    margin-top: 15px;
+    border-top: 1px solid rgb(0, 3, 14);
+}
+
+/*
+.user > .body > .card > .section + .section:before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgb(0, 3, 14);
+}
+*/
+
+.user > .body > .card > .section {
+    padding: 17px;
+}
+
+.user > .body > .card > .section.progress {
+    font-family: Inter-Regular, sans-serif;
+}
+
+.user > .body > .card > .section.progress > progress {
+    appearance: none;
+    height: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+}
+
+.user > .body > .card > .section.progress > progress::-webkit-progress-bar {
+    background-color: rgb(26, 29, 49); /* Custom background color */
+    border-radius: 8px;
+}
+
+.user > .body > .card > .section.progress > progress::-webkit-progress-value {
+    background-color: #0062ff; /* Custom progress color */
+    border-radius: 8px;
+}
+
+.user > .body > .card > .section.progress > .sub.left { float: left; }
+.user > .body > .card > .section.progress > .sub.right { float: right; }
+
+.user > .body > .card > .section.progress > .sub {
+    font-family: Inter-Regular, sans-serif;
+    font-size: 14px;
+}
+
+.user > .body > .card > .section.progress > .sub > span.gray {
+    color: gray;
+}
+
+.user > .body > .card > .section.statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user > .body > .card > .section.statistics > .box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user > .body > .card > .section.statistics > .box > .icon.purple > i { color: #6a64ec; }
+.user > .body > .card > .section.statistics > .box > .icon.green > i { color: #0ead69; }
+.user > .body > .card > .section.statistics > .box > .icon.yellow > i { color: #f89f15; }
+
+.user > .body > .card > .section.statistics > .box > .icon > i {
+    font-size: 30px;
+}
+
+.user > .body > .card > .section.statistics > .box > .side > .number {
+    font-family: MPlus1p-Bold, sans-serif;
+    font-size: 18px;
+}
+
+.user > .body > .card > .section.statistics > .box > .side > .sub {
+    color: #aeb3b8;
+    font-size: 14px;
+}
+
+.user > .body > .card > .section.connections {
+
+}
+
+.user > .body > .card > .section.connections > .title {
+    font-family: Inter-Regular, sans-serif;
+    margin-bottom: 10px;
+}
+
+.user > .body > .card > .section.connections > .box {
+    display: flex;
+    align-items: center;
+}
+
+.user > .body > .card > .section.connections > .box > .icon {
+    background: #1e1aaf;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.user > .body > .card > .section.connections > .box > .icon > i {
+    font-size: 25px;
+    color: #00e6ff;
+}
+
+.user > .body > .card > .section.connections > .box > .name > .sub {
+    font-size: 14px;
+    color: gray;
+    margin-left: 1px;
+}
+
+.user > .body > .card > .section.connections > .box > .name {
+    margin-left: 10px;
+    font-size: 24px;
+    font-family: Inter-Regular, sans-serif;
+}
+
+.user > .body > .card > .section.connections > .box > button {
+    margin-left: auto;
+    color: white;
+    background: #0062ff;
+    border: none;
+    font-size: 20px;
+    padding: 11px 18px;
+    border-radius: 14px;
+}
+
+.user > .body > .card > .section.connections > .box.drawboard > .drawboard-popup {
+    position: absolute;
+    z-index: 12;
+    padding: 22px;
+    background: rgb(16, 19, 30);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transform: translateY(-13px);
+}
+
+.user > .body > .card > .section.connections > .box.drawboard > .drawboard-popup > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0062ff;
+    height: 44px;
+    width: 44px;
+    border: none;
+    border-radius: 5px;
+}
+
+.user > .body > .card > .section.connections > .box.drawboard > .drawboard-popup > button > i {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.user > .body > .card > .section.connections > .box.drawboard > .drawboard-popup > input {
+    flex: 1;
+    background: rgb(32, 34, 48);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    outline: 0px;
+    border: 1px solid transparent;
+}

@@ -1,0 +1,70 @@
+.photo-upload {
+    background: #161A2926;
+}
+
+.photo-upload > .body,
+.photo-upload > .header {
+    padding: 17px;
+    background: rgb(12, 16, 30);
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.photo-upload > .header > .status > progress {
+    appearance: none;
+    height: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+}
+
+.photo-upload > .header > .status > progress::-webkit-progress-bar {
+    background-color: rgb(26, 29, 49); /* Custom background color */
+    border-radius: 8px;
+}
+
+.photo-upload > .header > .status > progress::-webkit-progress-value {
+    background-color: #0062ff; /* Custom progress color */
+    border-radius: 8px;
+    transition: width 0.5s;
+}
+
+.photo-upload > .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-upload > .body > .text {
+    margin-right: auto;
+}
+
+.photo-upload > .body > button {
+    margin-top: 15px;
+    background: #0062ff;
+    color: white;
+    border-radius: 10px;
+    width: 40%;
+    border: none;
+    padding: 12px 8px;
+    font-size: 16px;
+    font-family: MPlus1p-Bold, sans-serif;
+    cursor: pointer;
+}
+
+.photo-upload > .body > .list {
+    margin-top: 10px;
+}
+
+.photo-upload > .body > .list:empty:before {
+    content: "Trwa wykrywanie słów...";
+    color: gray;
+    margin: 40px;
+    display: inline-block;
+}
+
+.photo-upload > .body > .list > .element + .element {
+    margin-top: 10px;
+}

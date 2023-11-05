@@ -1,0 +1,41 @@
+.update {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #121220;
+    border: 2px solid rgb(35, 35, 58);
+    border-radius: 5px;
+    width: 70vw;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.update > * {
+    padding: 20px;
+    text-align: center;
+}
+
+.update > .header {
+    background: rgb(21, 21, 37);
+    font-size: 24px;
+}
+
+.update > .body {
+
+}
+
+.update > .body > .text {
+    color: gray;
+}
+
+.update > .body > button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 60%;
+    background: dodgerblue;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,150 @@
+.calendar {
+    background: #161A2926;
+}
+
+.calendar > .header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar > .header > .month {
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    background: rgba(22, 26, 41, 0.4);
+    padding: 5px 20px;
+}
+
+.calendar > .header > .month > .text {
+    font-size: 20px;
+    font-family: Inter-Regular, sans-serif;
+}
+
+.calendar > .header > button:first-child {
+    margin-left: 10px;
+}
+
+.calendar > .header > button:last-child {
+    margin-right: 10px;
+}
+
+.calendar > .header > button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+}
+
+.calendar > .table {
+    --calendar-table-padding: 10px;
+    padding: var(--calendar-table-padding);
+}
+
+.calendar > .table > table {
+    margin-top: 10px;
+    width: -webkit-fill-available;
+    border-collapse: collapse;
+}
+
+.calendar table td {
+
+}
+
+.calendar table th {
+    text-align: center;
+    width: calc(calc(100vw / 7) - calc(2 * var(--calendar-table-padding)));
+    font-size: 16px;
+    font-family: Inter-Regular, sans-serif;
+}
+
+.calendar > .info {
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar > .info > .content {
+    width: calc(100vw - 20px);
+}
+
+.calendar > .info > .content > * {
+    width: fit-content;
+}
+
+.calendar > .info > .content > .title {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #283040;
+    width: 100%;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.calendar > .info > .content > .title > .big {
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.calendar > .info > .content > .title > .big:after {
+    content: "·";
+    color: gray;
+    margin-left: 8px;
+    margin-right: 6px;
+    font-family: MPlus1p-Bold, sans-serif;
+}
+
+.calendar > .info > .content > .title > .small {
+    position: relative;
+    top: 3px;
+    font-size: 16px;
+    color: gray;
+}
+
+.calendar > .info > .content > .list {
+    margin-left: 10px;
+}
+
+.calendar > .info > .content > .list:empty:before {
+    display: inline-block;
+    content: "Brak nadchodzących prac";
+    padding: 20px;
+    color: gray;
+    width: 80vw;
+    text-align: center;
+}
+
+.calendar > .info > .content > .list > *:first-child {
+    margin-top: 8px;
+}
+
+.calendar > .info > .content > .list > * + * {
+    margin-top: 4px;
+}
+
+.calendar > .info > .content > .list > *:before {
+    content: "";
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: red;
+}
+
+.calendar > .info > .content > .list > *.info:before { background: #25BF6C; }
+.calendar > .info > .content > .list > *.homework:before { background: #00B2FF; }
+.calendar > .info > .content > .list > *.partial:before { background: #8E25BF; }
+.calendar > .info > .content > .list > *.test:before { background: #BF2566; }
+
+.calendar > .info > .content > .list > * {
+    font-size: 18px;
+    font-family: MPlus1p-Regular, sans-serif;
+}
