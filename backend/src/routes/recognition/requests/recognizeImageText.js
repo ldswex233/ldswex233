@@ -37,14 +37,13 @@ router.post("/", authenticateToken, async (req, res) => {
 
         const ws = wsService.get(tokenData.id);
 
-        // TODO change this is for texting purposes only
-        ws.send(JSON.stringify({ type: "IMAGE_RECOGNITION", status: "recognizing text", progress: 1 }));
+        //ws.send(JSON.stringify({ type: "IMAGE_RECOGNITION", status: "recognizing text", progress: 1 }));
 
-        await new Promise((res) => { setTimeout(() => { res() }, 500) });
+        //await new Promise((res) => { setTimeout(() => { res() }, 500) });
 
-        return res.status(200).json({ status: 'ok', text: 'ZAMIAST - INSTEAD\nHANDEL - TRADE\nKABEL - WIRE\n\nBATYK - STICK\nOLBRZYMI -ENORMOUS\n' })
+        //return res.status(200).json({ status: 'ok', text: 'ZAMIAST - INSTEAD\nHANDEL - TRADE\nKABEL - WIRE\n\nBATYK - STICK\nOLBRZYMI -ENORMOUS\n' })
         
-        /*
+        
         Tesseract.recognize(
             file.filepath,
             'pol',
@@ -58,7 +57,6 @@ router.post("/", authenticateToken, async (req, res) => {
                 .status(200)
                 .json({ status: 'ok', text: text })
         });
-        */
     });
 });
 
