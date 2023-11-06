@@ -1,0 +1,20 @@
+.map-creator {
+    padding-bottom: 5px;
+    min-width: 350px;
+}
+
+.map-creator > .title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.map-creator > .header {
+    border-bottom: 2px solid #3a3a3a;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+
+.map-creator > .map {
+
+}

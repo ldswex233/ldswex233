@@ -1,0 +1,38 @@
+.test-creator {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.test-creator > .title {
+    font-size: 20px;
+}
+
+.test-creator > .body {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.test-creator > .body > input {
+    background: transparent;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 16px;
+    outline: 0;
+    color: white;
+}
+
+.test-creator > button {
+    margin-top: 10px;
+    color: white;
+    padding: 10px;
+    background: rgb(19, 19, 19);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 70px;
+}

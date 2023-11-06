@@ -1,0 +1,11 @@
+.card {
+    padding: 10px;
+    border-radius: 8px;
+    background: black;
+    vertical-align: text-top;
+    display: inline-block;
+}
+
+.card + .card {
+    margin-left: 10px;
+}

@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: Helvetica;
+    background: #111111;
+    color: white;
+}
+
+@font-face {
+    font-family: Compita-Regular;
+    src: url("../fonts/Compita-Regular.otf") format("opentype");
+}
+
+.display-none {
+    display: none;
+}
+
+/* Remove blue background when clicking button & outline */
+button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none !important; /* Might be in focus, but if button has no custom outline, can be here */
+}

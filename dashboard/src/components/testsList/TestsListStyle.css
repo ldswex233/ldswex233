@@ -1,0 +1,22 @@
+.tests-list {
+    padding-bottom: 5px;
+    min-width: 350px;
+}
+
+.tests-list > .title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tests-list > .header {
+    border-bottom: 2px solid #3a3a3a;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+
+.tests-list > .list {
+    max-height: 300px;
+    overflow: auto;
+    padding-right: 10px;
+}

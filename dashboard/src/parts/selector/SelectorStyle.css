@@ -1,0 +1,38 @@
+.selector {
+    padding: 10px;
+    border: 2px solid rgb(58, 58, 58);
+    border-radius: 10px;
+    background: rgb(19, 19, 19);
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.selector > .selected {
+
+}
+
+.selector > .options {
+    margin-top: 10px;
+    position: absolute;
+    transform: translateX(-11px);
+    z-index: 10;
+    background: rgb(19, 19, 19);
+    border: 2px solid rgb(58, 58, 58);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.selector > .options > .option {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.selector > .options > .option:hover {
+    background: rgb(42, 42, 42);
+}
+
+.selector > .options > .option + .option {
+
+}

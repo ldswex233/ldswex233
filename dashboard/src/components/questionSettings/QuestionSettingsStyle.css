@@ -1,0 +1,14 @@
+.question-settings {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    min-height: 50px;
+}
+
+.question-settings > .body:empty:before {
+    content: "Wybierz typ pytania by zacząć edycję";
+    color: gray;
+    margin: 10px;
+}
