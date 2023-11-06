@@ -1,0 +1,86 @@
+:root {
+    --notify-top: 30px;
+    --animation-duration: 0.5s;
+    --btn-light-purple: #9162E8FF;
+    --btn-dark-purple: #3D1489FF;
+    --btn-blue: #0090e7;
+    --btn-white: #e4eaec;
+    --btn-green: #00e159;
+    --btn-red: #fc424a;
+    --btn-yellow: #ffab00;
+    --notifcation-bottom-hide: 50px;
+    --notification-bottom-show: -20px;
+}
+
+.notification-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--notification-bottom-show));
+    z-index: 99999;
+    font-family: Helvetica, sans-serif;
+}
+
+.notification-container.show {
+    /* bottom: 20px; */
+    transform: translateX(-50%) translateY(var(--notification-bottom-show));
+    animation: notification-show 0.4s;
+}
+
+.notification-container.hide {
+    /* bottom: -50px; */
+    transform: translateX(-50%) translateY(var(--notifcation-bottom-hide));
+    animation: notification-hide 0.4s;
+}
+
+@keyframes notification-hide {
+    from { transform: translateX(-50%) translateY(var(--notification-bottom-show)); }
+    to { transform: translateX(-50%) translateY(var(--notifcation-bottom-hide)); }
+}
+
+@keyframes notification-show {
+    from { transform: translateX(-50%) translateY(var(--notifcation-bottom-hide)); }
+    to { transform: translateX(-50%) translateY(var(--notification-bottom-show));; }
+}
+
+.notification-container > .notification {
+    /* background: #171717; */
+    background: #0e0e0e;
+    filter: drop-shadow(2px 4px 6px black);
+    border-radius: 15px;
+    height: 50px;
+    padding-left: 13px;
+    padding-right: 17px;
+    width: 240px;
+}
+
+.notification-container > .notification > div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.notification-container > .notification > .icon {
+    display: inline-block;
+}
+
+.notification-container > .notification > .icon img {
+    height: 30px;
+    vertical-align: middle;
+}
+
+
+.notification-container > .notification > .text:before {
+    content: "|";
+    color: white;
+}
+
+.notification-container > .notification > .text {
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
