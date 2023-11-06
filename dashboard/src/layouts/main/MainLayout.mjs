@@ -19,5 +19,5 @@ export const MainLayout = new LayoutLoader(createLayout(
 MainLayout.onLoad(async () => {
     MainLayout
         .select(ContentComponent)
-        .loadLayout(QuestionCreatorLayout)
+        .loadLayout(TestCreatorLayout)
 });
